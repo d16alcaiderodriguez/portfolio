@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,15 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navegació fixa -->
+  <!-- Navegación fija -->
   <header class="nav-container">
-    <a href="#" class="brand-logo">D. ALCAIDE</a>
+    <a href="#" class="brand-logo">DAVID ALCAIDE RODRÍGUEZ</a>
     <nav class="nav-links">
       <a href="#proyectos"><span class="nav-num">01</span> Proyectos</a>
       <a href="#stack"><span class="nav-num">02</span> Stack</a>
@@ -29,99 +29,105 @@
     <!-- Hero / Masthead -->
     <section class="hero-section">
       <div class="masthead-top">
-        <span class="tag-mono">ENGINYERIA ELECTRÒNICA DE TELECOMUNICACIÓ</span>
+        <span class="tag-mono">INGENIERÍA ELECTRÓNICA DE TELECOMUNICACIÓN</span>
         <span class="tag-mono">UNIVERSITAT DE BARCELONA</span>
       </div>
       <h1 class="hero-title">David Alcaide Rodríguez</h1>
       <div class="hero-grid">
-        <p class="hero-role">Electrònica de Potència <br>&amp; Sistemes Encastats <br>&amp; Disseny Digital</p>
+        <div class="hero-role-box">
+          <p class="hero-role">Ingeniería Electrónica<br>de Telecomunicación</p>
+          <a href="#proyectos" class="hero-scroll-btn" aria-label="Ir a proyectos">
+            <span>Ver proyectos</span>
+            <span class="scroll-arrow">↓</span>
+          </a>
+        </div>
         <p class="hero-intro">
-          Dissenyant electrònica d'alt rendiment, des de la conversió d'energia i el control en temps real fins a arquitectures digitals. Enfocat en solucions robustes, eficients i d'alta fiabilitat.
+          Diseñando electrónica de alto rendimiento, desde la conversión de energía y el control en tiempo real hasta arquitecturas digitales. Enfocado en soluciones robustas, eficientes y de alta fiabilidad.
         </p>
       </div>
     </section>
 
-    <!-- Marquee de paraules clau -->
+    <!-- Marquee de palabras clave -->
     <section class="marquee-wrapper" aria-hidden="true">
       <div class="marquee-track">
-        <span>POWER ELECTRONICS</span><span class="star">★</span>
-        <span>EMBEDDED SYSTEMS</span><span class="star">★</span>
-        <span>DIGITAL DESIGN</span><span class="star">★</span>
-        <span>PCB LAYOUT</span><span class="star">★</span>
         <span>HARDWARE ARCHITECTURE</span><span class="star">★</span>
-        <span>POWER ELECTRONICS</span><span class="star">★</span>
         <span>EMBEDDED SYSTEMS</span><span class="star">★</span>
-        <span>DIGITAL DESIGN</span><span class="star">★</span>
-        <span>PCB LAYOUT</span><span class="star">★</span>
+        <span>PCB LAYOUT Y KICAD</span><span class="star">★</span>
+        <span>POWER ELECTRONICS</span><span class="star">★</span>
+        <span>VERILOG / HDL</span><span class="star">★</span>
+        <span>REAL-TIME CONTROL</span><span class="star">★</span>
+        <span>LTSPICE SIMULATION</span><span class="star">★</span>
+        <span>MATLAB Y SIMULINK</span><span class="star">★</span>
+        <span>C / PYTHON DEVELOPER</span><span class="star">★</span>
         <span>HARDWARE ARCHITECTURE</span><span class="star">★</span>
+        <span>EMBEDDED SYSTEMS</span><span class="star">★</span>
+        <span>PCB LAYOUT Y KICAD</span><span class="star">★</span>
+        <span>POWER ELECTRONICS</span><span class="star">★</span>
+        <span>VERILOG / HDL</span><span class="star">★</span>
+        <span>REAL-TIME CONTROL</span><span class="star">★</span>
+        <span>LTSPICE SIMULATION</span><span class="star">★</span>
+        <span>MATLAB Y SIMULINK</span><span class="star">★</span>
+        <span>C / PYTHON DEVELOPER</span><span class="star">★</span>
       </div>
     </section>
 
-    <!-- Projectes -->
+    <!-- Proyectos -->
     <section id="proyectos" class="section-padding">
       <div class="section-header">
         <h2 class="section-title"><span class="num">01</span> Proyectos destacados</h2>
-        
-        <!-- Filtres -->
-        <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="potencia">Potencia</button>
-          <button class="filter-btn" data-filter="embedded">Embedded</button>
-          <button class="filter-btn" data-filter="digital">Digital</button>
-        </div>
       </div>
 
       <div id="projects-list" class="projects-list">
-        <!-- Renderitzat dinàmicament des de script.js -->
+        <!-- Renderizado dinámicamente desde script.js -->
       </div>
     </section>
 
-    <!-- Stack Tècnic -->
+    <!-- Stack Técnico -->
     <section id="stack" class="section-padding bg-paper-alt">
       <div class="section-header">
         <h2 class="section-title"><span class="num">02</span> Stack técnico</h2>
       </div>
-      <div id="stack-grid" class="stack-grid">
-        <!-- Renderitzat dinàmicament des de script.js -->
+      <div id="stack-grid" class="stack-grid-board">
+        <!-- Renderizado dinámicamente desde script.js -->
       </div>
     </section>
 
-    <!-- Sobre mi -->
+    <!-- Sobre mí -->
     <section id="sobre-mi" class="section-padding">
       <div class="section-header">
         <h2 class="section-title"><span class="num">03</span> Sobre mí</h2>
       </div>
       <div class="about-container reveal-on-scroll">
         <blockquote class="about-quote">
-          "L'enginyeria electrònica és l'art de dominar el món físic mitjançant la precisió del disseny digital i de potència."
+          "Ver cómo un circuito complejo responde con precisión a lo que un día ideaste es la prueba definitiva de que cada hora invertida valió la pena."
         </blockquote>
         <div class="about-text">
           <p>
-            Soc estudiant de darrer curs d'Enginyeria Electrònica de Telecomunicació a la Universitat de Barcelona. El meu perfil combina una sòlida base teòrica amb una orientació pràctica cap al desenvolupament de hardware i sistemes en temps real.
+            Como estudiante de último curso de <strong>Ingeniería Electrónica de Telecomunicación</strong>, oriento mi proyección profesional hacia el desarrollo de sistemas electrónicos de <strong>alta fiabilidad</strong> y <strong>rendimiento</strong>. Me motiva enfrentarme a retos complejos en sectores exigentes —como la movilidad avanzada, la defensa o la industria aeroespacial—, donde la <strong>calidad</strong> del hardware y el <strong>rigor</strong> técnico marcan verdaderamente la diferencia.
           </p>
           <p>
-            M'especialitzo en el disseny de sistemes electrònics integrats, abastant des del desenvolupament d'etapes de potència eficients fins a la programació d'equips encastats i la implementació de lògica digital personalitzada.
+            A lo largo de la carrera he disfrutado trabajando en todas las etapas que hacen funcionar un sistema: desde el análisis analógico y el diseño de la placa hasta la programación en C, el procesado de señal y la lógica digital en HDL. Entiendo la ingeniería como un proceso donde el análisis teórico, el diseño físico y el software convergen; respaldados siempre por la validación metódica en el laboratorio.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Contacte -->
+    <!-- Contacto -->
     <section id="contacto" class="section-padding bg-paper-alt">
       <div class="section-header">
         <h2 class="section-title"><span class="num">04</span> Contacto</h2>
       </div>
       <div class="contact-container reveal-on-scroll">
-        <p class="contact-lead">Tens un projecte o una oportunitat en ment? Connectem.</p>
+        <p class="contact-lead">¿Tienes un proyecto o una oportunidad en mente? Conectemos.</p>
         <div class="contact-links">
-          <a href="mailto:tu-email@ejemplo.com" class="contact-card">
+          <a href="mailto:d16alcaiderodriguez@gmail.com" class="contact-card">
             <span class="contact-label">EMAIL</span>
-            <span class="contact-value">tu-email@ejemplo.com</span>
+            <span class="contact-value">d16alcaiderodriguez@gmail.com</span>
             <span class="arrow">→</span>
           </a>
-          <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener" class="contact-card">
+          <a href="https://www.linkedin.com/in/davidalcaide16/" target="_blank" rel="noopener" class="contact-card">
             <span class="contact-label">LINKEDIN</span>
-            <span class="contact-value">linkedin.com/in/tu-perfil</span>
+            <span class="contact-value">davidalcaide16</span>
             <span class="arrow">→</span>
           </a>
         </div>
@@ -136,22 +142,22 @@
     </div>
   </footer>
 
-  <!-- Modal de detall de projecte -->
+  <!-- Modal de detalle de proyecto -->
   <div id="project-modal" class="modal" aria-hidden="true" role="dialog">
     <div class="modal-overlay" data-close></div>
     <div class="modal-card">
-      <button class="modal-close" data-close aria-label="Tancar modal">&times;</button>
+      <button class="modal-close" data-close aria-label="Cerrar modal">&times;</button>
       <div id="modal-content">
-        <!-- Contingut injectat per JavaScript -->
+        <!-- Contenido inyectado por JavaScript -->
       </div>
     </div>
   </div>
 
-  <!-- Lightbox per a imatges -->
+  <!-- Lightbox para imágenes -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <div class="lightbox-overlay" data-close-lightbox></div>
     <div class="lightbox-container">
-      <button class="lightbox-close" data-close-lightbox aria-label="Tancar lightbox">&times;</button>
+      <button class="lightbox-close" data-close-lightbox aria-label="Cerrar lightbox">&times;</button>
       <img id="lightbox-img" src="" alt="Vista ampliada">
     </div>
   </div>

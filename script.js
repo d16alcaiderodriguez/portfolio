@@ -1,21 +1,21 @@
 /* ==========================================================================
-   DADES EDITABLES (PROJECTES I STACK)
+   DATOS EDITABLES (PROYECTOS Y STACK FINAL)
    ========================================================================== */
 
 const PROJECTS = [
   {
     id: "potencia-convertidor",
-    title: "Convertidor DC/DC d'Alta Eficiència",
+    title: "Convertidor DC/DC de Alta Eficiencia",
     category: "potencia",
-    summary: "Disseny i optimització d'un convertidor Buck-Boost synchronously rectified per a aplicacions d'alta densitat de potència.",
-    description: "Aquest projecte abasta el disseny complet d'un convertidor DC/DC d'alta eficiència (95%+), des del càlcul dels components magnètics passius fins al disseny del PCB de 4 capes amb restriccions estrictes d'EMI i gestió tèrmica. Inclou control en bucle tancat implementat sobre un microcontrolador de senyal mixta.",
+    summary: "Diseño y optimización de un convertidor Buck-Boost rectificado sincrónicamente para aplicaciones de alta densidad de potencia.",
+    description: "Este proyecto abarca el diseño completo de un convertidor DC/DC de alta eficiencia (95%+), desde el cálculo de los componentes magnéticos pasivos hasta el diseño del PCB de 4 capas con restricciones strictly de EMI y gestión térmica. Incluye control en bucle cerrado implementado sobre un microcontrolador de señal mixta.",
     features: [
-      "Eficiència màxima del 96.2% a plena càrrega",
-      "Rangel de tensió d'entrada d'ampla gamma: 9V a 36V",
-      "Control de corrent en mode mitjà amb compensació de bucle",
-      "PCB dissenyat en 4 capes amb pla de massa optimitzat per a reducció de soroll"
+      "Eficiencia máxima del 96.2% a plena carga",
+      "Rango de tensión de entrada de amplia gama: 9V a 36V",
+      "Control de corriente en modo medio con compensación de bucle",
+      "PCB diseñado en 4 capas con plano de masa optimizado para reducción de ruido"
     ],
-    tags: ["Electrònica de Potència", "KiCad", "LTspice", "Buck-Boost", "Control Bucle Tancat"],
+    tags: ["Electrónica de Potencia", "KiCad", "LTspice", "Buck-Boost", "Control Bucle Cerrado"],
     images: [
       "assets/projects/project1-1.jpg",
       "assets/projects/project1-2.jpg"
@@ -23,15 +23,15 @@ const PROJECTS = [
   },
   {
     id: "embedded-rtos",
-    title: "Sistema Encastat de Monitorització Tèrmica",
+    title: "Sistema Empotrado de Monitorización Térmica",
     category: "embedded",
-    summary: "Node de sensorització industrial en temps real basat en FreeRTOS i microcontrolador ARM Cortex-M4.",
-    description: "Desenvolupament d'un node industrial per a la lectura i processament de sensors de temperatura d'alta precisió (RTD/Termocuple) en entorns industrials crítics. Implementat sobre FreeRTOS per a garantir latències deterministes en la comunicació i l'enviament de dades via bus CAN.",
+    summary: "Nodo de sensorización industrial en tiempo real basado en FreeRTOS y microcontrolador ARM Cortex-M4.",
+    description: "Desarrollo de un nodo industrial para la lectura y procesamiento de sensores de temperatura de alta precisión (RTD/Termopar) en entornos industriales críticos. Implementado sobre FreeRTOS para garantizar latencias deterministas en la comunicación y el envío de datos vía bus CAN.",
     features: [
-      "Arquitectura de tasques concurrents sobre FreeRTOS",
-      "Adquisició de dades multicanal mitjançant ADC de 24 bits via SPI",
-      "Stack de comunicacions CAN 2.0B personalitzat",
-      "Mode Low-Power per a funcionament amb bateria de suport"
+      "Arquitectura de tareas concurrentes sobre FreeRTOS",
+      "Adquisición de datos multicanal mediante ADC de 24 bits vía SPI",
+      "Stack de comunicaciones CAN 2.0B personalizado",
+      "Modo Low-Power para funcionamiento con batería de respaldo"
     ],
     tags: ["Embedded C", "FreeRTOS", "ARM Cortex-M4", "Bus CAN", "SPI/I2C"],
     images: [
@@ -39,59 +39,88 @@ const PROJECTS = [
     ]
   },
   {
-    id: "digital-coprocessador",
-    title: "Coprocessador Digital de Filtres FIR en SystemVerilog",
+    id: "digital-coprocesador",
+    title: "Coprocesador Digital de Filtros FIR en SystemVerilog",
     category: "digital",
-    summary: "Arquitectura en FPGA per al processament digital de senyal en temps real d'àudio d'alta fidelitat.",
-    description: "Disseny, simulació i síntesi d'un coprocessador de filtre digital FIR parametritzable (ordre configurable) optimitzat en pipeline per a FPGAs. El sistema permet el filtratge de senyals d'àudio en temps real reduint l'ús de blocs DSP interns.",
+    summary: "Arquitectura en FPGA para el procesamiento digital de señal en tiempo real de audio de alta fidelidad.",
+    description: "Diseño, simulación y síntesis de un coprocesador de filtro digital FIR parametrizable (orden configurable) optimizado en pipeline para FPGAs. El sistema permite el filtrado de señales de audio en tiempo real reduciendo el uso de bloques DSP internos.",
     features: [
-      "Arquitectura parametritzable en SystemVerilog",
-      "Banc de proves (Testbench) complet amb ModelSim/Questa",
-      "Optimització en Pipeline per a freqüències de rellotge superiors a 150 MHz",
-      "Interfície de control fàcilment integrable amb bus AXI-Lite"
+      "Arquitectura parametrizable en SystemVerilog",
+      "Banco de pruebas (Testbench) completo con ModelSim/Questa",
+      "Optimización en Pipeline para frecuencias de reloj superiores a 150 MHz",
+      "Interfaz de control fácilmente integrable con bus AXI-Lite"
     ],
     tags: ["SystemVerilog", "FPGA", "DSP", "ModelSim", "Vivado"],
     images: [
       "assets/projects/project3-1.jpg"
     ]
+  },
+  {
+    id: "instrumentacion-adquisicion",
+    title: "Sistema de Adquisición de Datos de Alta Velocidad",
+    category: "instrumentación",
+    summary: "Acondicionamiento de señal analógica y digitalización en tiempo real para análisis en MATLAB.",
+    description: "Diseño e implementación de una etapa analógica de amplificación y filtrado de bajo ruido acoplada a un ADC multicanal de alta velocidad. El sistema transmite tramas de datos estructuradas mediante protocolo propietario a una interfaz en Python/MATLAB para procesamiento en tiempo real.",
+    features: [
+      "Etapa analógica frontend de bajo ruido con amplificadores operacionales de precisión",
+      "Filtro paso bajo activo anti-aliasing de orden elevado",
+      "Protocolo de comunicación serie de alta velocidad optimizado",
+      "Scripts de recepción y procesado espectral de señal en MATLAB/Python"
+    ],
+    tags: ["Acondicionamiento Analógico", "MATLAB", "Python", "KiCad", "ADC"],
+    images: [
+      "assets/projects/project4-1.jpg"
+    ]
   }
 ];
 
+// Stack exacto de 6 secciones
 const STACK = [
   {
-    category: "Electrònica de Potència",
-    items: ["Convertidors DC/DC & AC/DC", "LTspice / PSpice", "Dimensionament Magnètic", "Disseny Tèrmic & EMI"]
+    category: "LENGUAJES Y HDL",
+    items: ["C", "Python", "Verilog", "SystemVerilog"]
   },
   {
-    category: "Sistemes Encastats",
-    items: ["Embedded C / C++", "ARM Cortex-M", "FreeRTOS", "Busos: CAN, SPI, I2C, UART", "MSP430 / STM32"]
+    category: "ELECTRÓNICA DE POTENCIA",
+    items: ["Convertidores DC-DC", "Puente en H", "Control PID", "Gestión Térmica y EMI"]
   },
   {
-    category: "Disseny Digital & PCB",
-    items: ["KiCad / Altium", "SystemVerilog / VHDL", "FPGAs (Xilinx / Altera)", "MATLAB & Simulink", "Lab Equipment (Oscil·loscopi, LCR)"]
+    category: "DISEÑO PCB Y SIMULACIÓN",
+    items: ["KiCad", "LTspice", "Acondicionamiento Analógico", "Selección de Componentes"]
+  },
+  {
+    category: "FLUJO ASIC / EDA",
+    items: ["Cadence Xcelium", "Genus", "Innovus", "Modus"]
+  },
+  {
+    category: "MICROCONTROLADORES",
+    items: ["MSP430", "Arduino", "ESP-01S", "STM32"]
+  },
+  {
+    category: "LABORATORIO",
+    items: ["Osciloscopio", "Multímetro", "Analog Discovery 2", "Soldadura THT/SMD"]
   }
 ];
 
 /* ==========================================================================
-   INICIALITZACIÓ I RENDERITZAT
+   INICIALIZACIÓN Y RENDERIZADO
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects(PROJECTS);
   renderStack(STACK);
-  initFilters();
   initModal();
   initLightbox();
   initScrollReveal();
 });
 
-/* Renderitzar projectes a la llista */
+/* Renderizar proyectos en la lista */
 function renderProjects(projectsToRender) {
   const container = document.getElementById('projects-list');
   container.innerHTML = '';
 
   if (projectsToRender.length === 0) {
-    container.innerHTML = `<p class="tag-mono" style="padding: 2rem 0;">No s'han trobat projectes en aquesta categoria.</p>`;
+    container.innerHTML = `<p class="tag-mono" style="padding: 2rem 0;">No se han encontrado proyectos.</p>`;
     return;
   }
 
@@ -120,52 +149,32 @@ function renderProjects(projectsToRender) {
   });
 }
 
-/* Renderitzar Stack Tècnic */
+/* Renderizar Stack */
 function renderStack(stackData) {
   const container = document.getElementById('stack-grid');
   container.innerHTML = '';
 
   stackData.forEach(group => {
-    const groupEl = document.createElement('div');
-    groupEl.className = 'stack-group reveal-on-scroll';
+    const boxEl = document.createElement('div');
+    boxEl.className = 'stack-board-box reveal-on-scroll';
 
-    const tagsHtml = group.items.map(item => `<span class="tag-pill">${item}</span>`).join('');
+    const itemsHtml = group.items.map(item => `
+      <li><span class="arrow-icon">→</span> ${item}</li>
+    `).join('');
 
-    groupEl.innerHTML = `
-      <h3 class="stack-group-title">${group.category}</h3>
-      <div class="stack-tags">
-        ${tagsHtml}
-      </div>
+    boxEl.innerHTML = `
+      <h3 class="stack-board-title">${group.category}</h3>
+      <ul class="stack-board-list">
+        ${itemsHtml}
+      </ul>
     `;
 
-    container.appendChild(groupEl);
+    container.appendChild(boxEl);
   });
 }
 
 /* ==========================================================================
-   FILTRES
-   ========================================================================== */
-function initFilters() {
-  const buttons = document.querySelectorAll('.filter-btn');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-      if (filter === 'all') {
-        renderProjects(PROJECTS);
-      } else {
-        const filtered = PROJECTS.filter(p => p.category.toLowerCase() === filter.toLowerCase());
-        renderProjects(filtered);
-      }
-    });
-  });
-}
-
-/* ==========================================================================
-   MODAL DE DETALL
+   MODAL DE DETALLE
    ========================================================================== */
 const modal = document.getElementById('project-modal');
 const modalContent = document.getElementById('modal-content');
@@ -196,18 +205,18 @@ function openModal(project) {
     
     <p class="modal-description">${project.description}</p>
 
-    <h4 class="modal-subtitle">Característiques Clau</h4>
+    <h4 class="modal-subtitle">Características Clave</h4>
     <ul class="modal-features">
       ${featuresHtml}
     </ul>
 
-    <h4 class="modal-subtitle">Tecnologies</h4>
+    <h4 class="modal-subtitle">Tecnologías</h4>
     <div class="stack-tags" style="margin-bottom: 2rem;">
       ${tagsHtml}
     </div>
 
     ${project.images.length > 0 ? `
-      <h4 class="modal-subtitle">Galeria d'imatges</h4>
+      <h4 class="modal-subtitle">Galería de imágenes</h4>
       <div class="modal-gallery">
         ${imagesHtml}
       </div>
@@ -259,7 +268,7 @@ function closeLightbox() {
 }
 
 /* ==========================================================================
-   REVELAT EN SCROLL (INTERSECTION OBSERVER)
+   REVELADO EN SCROLL (INTERSECTION OBSERVER)
    ========================================================================== */
 function initScrollReveal() {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
